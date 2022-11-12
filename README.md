@@ -19,3 +19,7 @@
 - 下载代码
 - `go run main.go`
 - 前端代码说明看`kernel/public/README.md`
+
+### 规划
+
+- github CICD 自动打包exe

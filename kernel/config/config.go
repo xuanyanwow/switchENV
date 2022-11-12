@@ -1,6 +1,7 @@
 package config
 
 import (
+	"fmt"
 	"gopkg.in/ini.v1"
 	"os"
 )
@@ -19,14 +20,17 @@ func IsDev() bool {
 
 func Init() {
 	DbPath = Cfg.Section("").Key("db_path").String()
+	fmt.Println(DbPath)
 	if DbPath == "" {
 		DbPath, _ = os.Getwd()
 	}
+	fmt.Println(DbPath)
 
 	DbName = Cfg.Section("").Key("db_name").String()
 	if DbName == "" {
 		DbName = "switchENV.db"
 	}
+	fmt.Println(DbName)
 
 	BatPath = Cfg.Section("").Key("bat_path").String()
 	if BatPath == "" {

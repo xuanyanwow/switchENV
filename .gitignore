@@ -4,3 +4,4 @@ bat/*
 *.exe
 .idea/
 *.7z
+set.ini

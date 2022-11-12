@@ -14,11 +14,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        include:
-          - goarch: amd64
-            goos: darwin
-          - goarch: arm64
-            goos: darwin
+        os: [ubuntu-18.04]
+        goarch: [arm64,amd64]
+        goos: [darwin]
+        
     steps:
     - uses: actions/checkout@v3
 

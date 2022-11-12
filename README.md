@@ -22,4 +22,4 @@
 
 ### 规划
 
-- github CICD 自动打包exe
+- [ ] github CICD 自动打包exe

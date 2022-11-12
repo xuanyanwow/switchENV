@@ -35,7 +35,7 @@ func Init() {
 
 	BatIdentify = Cfg.Section("").Key("bat_identify").String()
 	if BatIdentify == "" {
-		BatIdentify, _ = os.Getwd()
+		BatIdentify = "bat"
 	}
 
 	//fmt.Println(DbPath)

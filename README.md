@@ -23,4 +23,5 @@
 
 ### 规划
 
-- [ ] github CICD 自动打包exe
+- [x] github CICD 自动打包exe
+- [ ] github CI中 添加set.ini的初始化到压缩包

@@ -50,6 +50,7 @@ jobs:
       env:
         GOOS: ${{ matrix.goos }}
         GOARCH: ${{ matrix.goarch }}
+        CGO_ENABLED: 1
       
     - name: Packaging...
       run: tar czf switchENV-${{ matrix.goos }}-${{ steps.get_version.outputs.VERSION }}.tgz switchENV.exe

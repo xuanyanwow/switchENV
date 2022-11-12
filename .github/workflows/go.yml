@@ -42,8 +42,7 @@ jobs:
         prerelease: false
 
     - name: Test Release
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "${{ steps.create_release.outputs.upload_url }}"
+      run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event. ${{ steps.create_release.outputs.upload_url }}"
 
       
     - name: Build exe

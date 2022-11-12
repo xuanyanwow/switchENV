@@ -16,7 +16,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         goarch: [amd64]
-        goos: [darwin]
+        goos: [windows]
         
     steps:
     - uses: actions/checkout@v3
@@ -46,13 +46,13 @@ jobs:
 
       
     - name: Build exe
-      run: go build -o switchENV-${{ matrix.goos }}-${{ steps.get_version.outputs.VERSION }}.exe
+      run: go build -o switchENV.exe
       env:
         GOOS: ${{ matrix.goos }}
         GOARCH: ${{ matrix.goarch }}
       
     - name: Packaging...
-      run: tar czf switchENV-${{ matrix.goos }}-${{ steps.get_version.outputs.VERSION }}.tgz switchENV-${{ matrix.goos }}-${{ steps.get_version.outputs.VERSION }}.exe
+      run: tar czf switchENV-${{ matrix.goos }}-${{ steps.get_version.outputs.VERSION }}.tgz switchENV.exe
       
     - name: Uploading assets...
       id: upload-release-asset 

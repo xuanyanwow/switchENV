@@ -28,9 +28,9 @@ func main() {
 
 	go kernel.Server()
 
-	_ = Open("http://127.0.0.1:8080")
+	_ = Open("http://"+kernel.ServerAddress())
 
-	fmt.Println("请在浏览器打开 http://127.0.0.1:8080 ")
+	fmt.Println("请在浏览器打开 http://" + kernel.ServerAddress())
 
 	<-controller.OpenChannel
 }

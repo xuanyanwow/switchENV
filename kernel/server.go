@@ -17,17 +17,33 @@ func Server() {
 		fmt.Println("配置 --> 正式模式")
 		gin.SetMode(gin.ReleaseMode)
 	}
-	// 开启跨域
-	Cors()
 
 	r := gin.Default()
+	// 开启跨域
+	r.Use(Cors())
 
 	router.Init(r)
 
-	err := r.Run()
+
+	//fmt.Println(address+":"+port)
+	//os.Exit(1)
+
+	err := r.Run(ServerAddress())
 	if err != nil {
 		panic(err)
 	} // listen and serve on 0.0.0.0:8080
+}
+
+func ServerAddress() string {
+	address := config.Cfg.Section("gin").Key("address").String()
+	port := config.Cfg.Section("gin").Key("port").String()
+	if address == "" {
+		address = "127.0.0.1"
+	}
+	if port == "" {
+		port = "8080"
+	}
+	return address+":"+port
 }
 
 func Cors() gin.HandlerFunc {

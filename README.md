@@ -19,6 +19,7 @@
 - 下载代码
 - `go run main.go`
 - 前端代码说明看`kernel/public/README.md`
+- 打包命令`go build -o switchENV.exe`
 
 ### 规划
 

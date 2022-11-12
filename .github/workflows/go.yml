@@ -40,7 +40,11 @@ jobs:
         release_name: ${{ steps.get_version.outputs.VERSION }}
         draft: false
         prerelease: false
-        
+
+    - name: Test Release
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "${{ steps.create_release.outputs.upload_url }}"
+
       
     - name: Build exe
       run: go build -o switchENV-${{ matrix.goos }}-${{ steps.get_version.outputs.VERSION }}.exe

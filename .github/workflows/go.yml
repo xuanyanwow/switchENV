@@ -57,7 +57,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url: ${{ github.event.release.upload_url }}
+#        upload_url: ${{ github.event.release.upload_url }}
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./switchENV-${{ matrix.goos }}-${{ steps.get_version.outputs.VERSION }}
         asset_name: switchENV-${{ matrix.goos }}-${{ steps.get_version.outputs.VERSION }}
         asset_content_type: application/gzip

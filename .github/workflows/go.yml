@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        goarch: [arm64,amd64]
+        goarch: [amd64]
         goos: [darwin]
         
     steps:

@@ -62,6 +62,6 @@ jobs:
       with:
 #        upload_url: ${{ github.event.release.upload_url }}
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./switchENV-${{ matrix.goos }}-${{ steps.get_version.outputs.VERSION }}
+        asset_path: ./switchENV-${{ matrix.goos }}-${{ steps.get_version.outputs.VERSION }}.tgz
         asset_name: switchENV-${{ matrix.goos }}-${{ steps.get_version.outputs.VERSION }}
         asset_content_type: application/gzip

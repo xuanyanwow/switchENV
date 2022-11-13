@@ -25,7 +25,7 @@
 
 - 在软件目录同级新建`set.ini`
 - 放置以下文件内容
-```text
+```ini
 app_mode = dev
 
 db_path = D:\CodeSoft\switchEnv

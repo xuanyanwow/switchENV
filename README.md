@@ -1,8 +1,13 @@
+
 # switch ENV
 
 开发过程中，可能需要电脑共存n个版本的软件  如`php`,`composer`,`node`,`java`等
 
 使用本软件，可以灵活切换当前环境的软件变量（无需重启cmd）
+
+[![zFtPyD.md.png](https://s1.ax1x.com/2022/11/13/zFtPyD.md.png)](https://imgse.com/i/zFtPyD)
+[![zFYAP0.png](https://s1.ax1x.com/2022/11/13/zFYAP0.md.png)](https://imgse.com/i/zFYAP0)
+[![zFY0II.md.png](https://s1.ax1x.com/2022/11/13/zFY0II.md.png)](https://imgse.com/i/zFY0II)
 
 ## 使用教程
 

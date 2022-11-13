@@ -19,6 +19,26 @@
 4. 页面可视化配置和切换
 
 
+## 配置
+
+`默认`不需要什么配置，直接cmd运行软件即可，但是如果你需要自定义端口和目录等场景，可以按以下步骤新建配置文件
+
+- 在软件目录同级新建`set.ini`
+- 放置以下文件内容
+```text
+app_mode = dev
+
+db_path = D:\CodeSoft\switchEnv
+db_name = switch.db
+
+bat_path = D:\CodeSoft\switchEnv
+bat_identify = bat
+
+[gin]
+address = 127.0.0.1
+port = 8899
+```
+
 ## 开发
 
 - 下载代码
